@@ -3,7 +3,7 @@ import logo from '../../assets/jobs-logo.png'
 
 const Footer = () => {
     return (
-        <footer className="footer bg-base-200 text-base-content p-10">
+        <footer className="container mx-auto footer bg-base-200 text-base-content p-10">
             <aside>
                 <img src={logo} alt="" />
                 <p>
