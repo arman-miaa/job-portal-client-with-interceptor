@@ -4,8 +4,8 @@ import useAuth from "./useAuth";
 import { useNavigate } from "react-router-dom";
 
 const axiosInstance = axios.create({
-    baseURL: "http://localhost:5000",
-    withCredentials: true
+  baseURL: "https://job-portal-server-orpin-seven.vercel.app",
+  withCredentials: true,
 });
 
 const useAxiosSequre = () => {
@@ -16,7 +16,7 @@ const useAxiosSequre = () => {
         axiosInstance.interceptors.response.use(response => {
             return response;
         }, error => {
-            console.log('error caught in interceptor', error);
+            console.log('error caught in interceptor', error.status);
 
             if (error.status === 401 || error.status === 403) {
                 console.log('need to logout the user');
